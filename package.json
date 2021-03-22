@@ -4,13 +4,18 @@
   "description": "This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).",
   "main": "index.js",
   "scripts": {
-    "start": "npm run scss",
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css"
+    "lite": "lite-server",
+    "scss": "node-sass --watch scss -o css",
+    "watch:all": "parallelshell \"npm run scss\" \"npm run lite\""
   },
   "author": "Maria Glynou",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "parallelshell": "^3.0.1"
+  },
   "dependencies": {
     "node-sass": "^5.0.0"
   }
