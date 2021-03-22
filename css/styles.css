@@ -1,0 +1,60 @@
+/*Colors*/
+/*Primary*/
+/*Neutral*/
+/*Typography*/
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  background-color: white;
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  color: #2d314d;
+  font-weight: 300; }
+
+header, footer, main, section {
+  padding: 0.5em 1em; }
+
+h2, h3 {
+  font-weight: inherit;
+  padding-bottom: 10px; }
+
+p {
+  font-size: 1rem;
+  padding-bottom: 10px; }
+
+small {
+  font-size: 0.8rem; }
+
+li {
+  list-style-type: none; }
+
+button {
+  font-family: inherit;
+  color: white;
+  background: linear-gradient(100deg, #31d35c 0%, #2bb7da 100%);
+  border: #2bb7da;
+  padding: 10px;
+  border-radius: 15px; }
+
+.bg-light {
+  background-color: #f3f4f6; }
+
+.bg-darker {
+  background-color: #fafafa; }
+
+/*Typography*/
+/*Header*/
+header {
+  background-color: white; }
+
+/*Sections*/
+/*Footer*/
+footer {
+  background-color: #2d314d;
+  color: white; }

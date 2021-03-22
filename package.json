@@ -1,0 +1,17 @@
+{
+  "name": "easybank-landing-page-master",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run scss",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "author": "Maria Glynou",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
