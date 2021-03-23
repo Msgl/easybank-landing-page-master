@@ -12,41 +12,68 @@ $clr-neutral-white: hsl(0, 0%, 100%);
 /*Typography*/
 $ff-main: 'Public Sans', sans-serif;
 
-*, *::after,*::before {
+*, *::after,*::before{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
-}
-
-html{
     box-sizing: border-box;
 }
 
 body{
     background-color: $clr-neutral-white;
+    color: $clr-primary-blue;
     font-family: $ff-main;
     font-size: 18px;
-    color: $clr-primary-blue;
     font-weight: 300;
+}
+
+
+/* MORE GENERAL RULES*/
+/* paddings*/
+header, footer,  div:not(.main, .articles-item, .product-item){
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1.5em;
+}
+
+header, footer {
+    padding-top: 0.5em;
+}
+
+nav {
+    padding: 2em;
+}
+
+h1, h2 {
+    padding-top:1.5em;
+    padding-bottom: 0.5em;
+}
+
+h3 {
+    padding-top: 0em;
+    padding-bottom: 1em;
+}
+
+p {
+    padding-bottom: 2em;
+}
+
+.footer-logo, .footer-copyright {
+    padding: 1em;
 }
 
 /*Typography*/
 h1 {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-h1, h2, h3 {
-    padding-top: 1em;
-    padding-bottom: 1em;
+h2, h3, p {
     font-weight: inherit;
 }
 
 p {
     font-size: 1rem;
-    padding-bottom: 1em;
-    color: $clr-neutral-blue;
-    font-size: 0.8em;
+    font-weight: 400;
 }
 
 small {
@@ -57,47 +84,69 @@ li {
     list-style-type: none;
 }
 
-/*Buttons */
-.request-inv-btn{
-    font-family: inherit;
-    color: $clr-neutral-white;
-    background: linear-gradient(100deg, $clr-primary-green 0%, $clr-primary-cyan 100%);
-    border: $clr-primary-cyan;
-    padding: 1em 1.5em;
-    border-radius: 1.7em;
+.intro-section, .product-section, h2, nav, footer {
+    text-align: center;
 }
 
-// .burger-btn {
-// }
+button {
+    font-family: inherit;
+}
+
+/*Colors*/
+p {
+    color: $clr-neutral-blue;
+}
+
+.intro-section, .articles-section  {
+    background-color: $clr-neutral-very-light-gray;
+}
+
+.product-section {
+    background-color: $clr-neutral-light-gray;
+}
+
+footer {
+    background-color: $clr-primary-blue;
+    color: $clr-neutral-white;
+
+}
+header, nav, .articles-item {
+    background-color: $clr-neutral-white;
+}
+
+/*Buttons */
+.request-inv-btn{
+    background: linear-gradient(100deg, $clr-primary-green 0%, $clr-primary-cyan 100%);
+    border-radius: 1.7em;
+    border: $clr-primary-cyan;
+    color: $clr-neutral-white;
+    padding: 1em 1.5em;
+}
+
+.burger-btn {
+    background-color: $clr-neutral-white;
+}
 
 /*Images*/
 img {
     max-width: 100%;
 }
 
-/*Padding(all except the div that has the intro-image*/
-.section-info, .section-articles, .section-intro-content, header, footer {
-    padding: 0.5em 1em;
-}
+
+/*MORE SPECIFIC RULES*/
 
 /*Header*/
-
 header {
-    background-color: $clr-neutral-white;
-    max-height: 3vh;
-    margin-bottom: 1em;
     display: flex;
-    justify-content: space-around;
+    height: 3vh;
+    justify-content: space-between;
 
     nav {
+        border-radius: 10px;
         display: none;
         position: absolute;
         top: 10vh;
-        width: 90vw;
-        background-color: $clr-neutral-white;
-        text-align: center;
-        padding: 10px;
-        border-radius: 10px;
+        width: 80vw;
 
         &.active{
             display: block;
@@ -118,20 +167,9 @@ header {
 }
 
 /*Sections*/
-.section{
-    &-intro, &-info, &-articles {
-        padding-bottom: 45px;
-    }
-}
-.section-intro, .section-info, h2 {
-    text-align: center;
-}
-
-.section-intro {
+.intro-section {
     display: flex;
     flex-wrap: wrap-reverse;
-    // flex-direction: column-reverse;
-    background-color: $clr-neutral-very-light-gray;
     .section-image {
         background: url(/images/image-mockups.png), url(/images/bg-intro-mobile.svg);
         background-repeat: no-repeat;
@@ -142,25 +180,10 @@ header {
     }
 }
 
-.section-info {
-    background-color: $clr-neutral-light-gray;
-}
-
-.section-articles {
-    background-color: $clr-neutral-very-light-gray;
-
-    .container-item {
-        background-color: $clr-neutral-white;
+.articles-section {
+    .articles-item {
         margin-bottom: 15px;
         border-radius: 10px;
-
-        .container-content {
-            padding: 1em 1em;
-        }
-
-        h3, p {
-            padding-bottom: 0.55em;
-        }
 
         img {
             border-top-left-radius: 10px;
@@ -171,20 +194,16 @@ header {
 
 /*Footer*/
 footer {
-    background-color: $clr-primary-blue;
-    color: $clr-neutral-white;
     display: flex;
     flex-direction: column;
-    text-align: center;
 
     .footer-logo {
         margin: auto;
-        padding: 1em;
     }
 
-    img {
-        fill: wheat;
-    }
+    // img {
+    //     fill: wheat;
+    // }
 
     .footer-social {
         a {
@@ -195,113 +214,4 @@ footer {
     .footer-links {
         padding: 0.5em;
     }
-    
-    .footer-copyright {
-        padding: 1em;
-    }
-}
-
-@media (min-width: 600px) {
-//     /*Layout-General*/
-//     h1, h2, p {
-//         padding-bottom: 15px;
-//         padding-top: 15px;
-//     }
-
-//     .section-intro, .section-info, h2 {
-//         text-align: left;
-//     }
-
-//     /*Typography*/
-
-//     /*Header*/
-
-//     /*Sections General*/
-//     .section-intro-content, .section-info, .section-articles {
-//         padding-left: 50px;
-//         padding-right: 50px;
-//     }
-
-//     /*Section-Intro*/
-//     .section-intro {
-//         .section-intro-content, .section-image {
-//             width: 50%;
-//         }
-
-//         // .section-image {
-//         //     background: url(/images/image-mockups.png), url(/images/bg-intro-mobile.svg);
-//         //     background-repeat: no-repeat;
-//         //     background-position: bottom right, center;
-//         //     background-size: 300px, cover;
-//         //     height: 40vh;
-//         // }
-//     }
-
-//     /*Section-Info*/
-//     .section-info {
-//         .section-p {
-//             padding-right: 100px;
-//         }
-//         .container {
-//             display: flex;
-//             flex-wrap: wrap;
-//             justify-content: center;
-
-
-//             .container-item {
-//                 width: 50%;
-//             }
-//         }
-
-//     }
-
-//     /*Section-Articles*/
-
-//     /*Footer*/
-}
-
-@media (min-width: 1000px) {
-    // /*Layout-General*/
-    // h1, h2, p {
-    //     padding-bottom: 25px;
-    //     padding-top: 25px;
-    // }
-    // /*Typography*/
-
-    // /*Header*/
-
-    // /*Sections General*/
-
-    // /*Section-Intro*/
-    // .section-intro {
-    //     .section-intro-content {
-    //         width: 40%;
-    //     }
-        
-    //     .section-image {
-    //         width: 60%;
-    //     }
-    // }
-    // /*Section-Info*/
-    // .section-info {
-    //     padding-right: 300px;
-
-    //     .section-p {
-    //         padding-right: 50%;
-    //     }
-
-    //     .container {
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         justify-content: space-between;
-
-    //         .container-item {
-    //             max-width: 250px;
-    //         }
-    //     }
-    // }
-
-    // /*Section-Articles*/
-
-    // /*Footer*/
 }

@@ -5,33 +5,53 @@
 *, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
-
-html {
   box-sizing: border-box; }
 
 body {
   background-color: white;
+  color: #2d314d;
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
-  color: #2d314d;
   font-weight: 300; }
+
+/* MORE GENERAL RULES*/
+/* paddings*/
+header, footer, div:not(.main, .articles-item, .product-item) {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1.5em; }
+
+header, footer {
+  padding-top: 0.5em; }
+
+nav {
+  padding: 2em; }
+
+h1, h2 {
+  padding-top: 1.5em;
+  padding-bottom: 0.5em; }
+
+h3 {
+  padding-top: 0em;
+  padding-bottom: 1em; }
+
+p {
+  padding-bottom: 2em; }
+
+.footer-logo, .footer-copyright {
+  padding: 1em; }
 
 /*Typography*/
 h1 {
   font-size: 2rem;
-  font-weight: 300; }
+  font-weight: 400; }
 
-h1, h2, h3 {
-  padding-top: 1em;
-  padding-bottom: 1em;
+h2, h3, p {
   font-weight: inherit; }
 
 p {
   font-size: 1rem;
-  padding-bottom: 1em;
-  color: #9698a6;
-  font-size: 0.8em; }
+  font-weight: 400; }
 
 small {
   font-size: 0.8rem; }
@@ -39,39 +59,56 @@ small {
 li {
   list-style-type: none; }
 
+.intro-section, .product-section, h2, nav, footer {
+  text-align: center; }
+
+button {
+  font-family: inherit; }
+
+/*Colors*/
+p {
+  color: #9698a6; }
+
+.intro-section, .articles-section {
+  background-color: #fafafa; }
+
+.product-section {
+  background-color: #f3f4f6; }
+
+footer {
+  background-color: #2d314d;
+  color: white; }
+
+header, nav, .articles-item {
+  background-color: white; }
+
 /*Buttons */
 .request-inv-btn {
-  font-family: inherit;
-  color: white;
   background: linear-gradient(100deg, #31d35c 0%, #2bb7da 100%);
+  border-radius: 1.7em;
   border: #2bb7da;
-  padding: 1em 1.5em;
-  border-radius: 1.7em; }
+  color: white;
+  padding: 1em 1.5em; }
+
+.burger-btn {
+  background-color: white; }
 
 /*Images*/
 img {
   max-width: 100%; }
 
-/*Padding(all except the div that has the intro-image*/
-.section-info, .section-articles, .section-intro-content, header, footer {
-  padding: 0.5em 1em; }
-
+/*MORE SPECIFIC RULES*/
 /*Header*/
 header {
-  background-color: white;
-  max-height: 3vh;
-  margin-bottom: 1em;
   display: flex;
-  justify-content: space-around; }
+  height: 3vh;
+  justify-content: space-between; }
   header nav {
+    border-radius: 10px;
     display: none;
     position: absolute;
     top: 10vh;
-    width: 90vw;
-    background-color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px; }
+    width: 80vw; }
     header nav.active {
       display: block; }
     header nav li {
@@ -82,17 +119,10 @@ header {
     height: fit-content; }
 
 /*Sections*/
-.section-intro, .section-info, .section-articles {
-  padding-bottom: 45px; }
-
-.section-intro, .section-info, h2 {
-  text-align: center; }
-
-.section-intro {
+.intro-section {
   display: flex;
-  flex-wrap: wrap-reverse;
-  background-color: #fafafa; }
-  .section-intro .section-image {
+  flex-wrap: wrap-reverse; }
+  .intro-section .section-image {
     background: url(/images/image-mockups.png), url(/images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
     background-position: center bottom, center;
@@ -100,38 +130,20 @@ header {
     height: 25vh;
     width: 100%; }
 
-.section-info {
-  background-color: #f3f4f6; }
-
-.section-articles {
-  background-color: #fafafa; }
-  .section-articles .container-item {
-    background-color: white;
-    margin-bottom: 15px;
-    border-radius: 10px; }
-    .section-articles .container-item .container-content {
-      padding: 1em 1em; }
-    .section-articles .container-item h3, .section-articles .container-item p {
-      padding-bottom: 0.55em; }
-    .section-articles .container-item img {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px; }
+.articles-section .articles-item {
+  margin-bottom: 15px;
+  border-radius: 10px; }
+  .articles-section .articles-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
 
 /*Footer*/
 footer {
-  background-color: #2d314d;
-  color: white;
   display: flex;
-  flex-direction: column;
-  text-align: center; }
+  flex-direction: column; }
   footer .footer-logo {
-    margin: auto;
-    padding: 1em; }
-  footer img {
-    fill: wheat; }
+    margin: auto; }
   footer .footer-social a {
     padding: 0.5em; }
   footer .footer-links {
     padding: 0.5em; }
-  footer .footer-copyright {
-    padding: 1em; }
