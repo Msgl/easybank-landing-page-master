@@ -316,15 +316,13 @@ footer {
       footer .footer-part1 .footer-social {
         padding-top: 20px; }
         footer .footer-part1 .footer-social a {
-          padding-left: 10px; }
+          padding-left: 5px; }
     footer .footer-part2 {
-      align-self: flex-start;
       text-align: left;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      width: 400px;
-      flex-wrap: wrap;
-      justify-content: flex-start; }
+      min-width: 350px;
+      padding-bottom: 0; }
     footer .footer-part3 .footer-copyright {
       padding-top: 25px; } }
