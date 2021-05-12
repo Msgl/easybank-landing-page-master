@@ -72,6 +72,8 @@ footer {
     color: white; }
     footer .footer-links:hover {
       color: #31d35c; }
+  footer .copyright {
+    color: white; }
 
 header,
 nav,
@@ -221,6 +223,28 @@ footer {
   footer .footer-copyright {
     padding-top: 10px;
     padding-bottom: 10px; }
+
+/*contact.html*/
+.form-section {
+  height: 65vh;
+  padding-top: 20vh;
+  display: grid;
+  place-content: center; }
+  .form-section .my-form {
+    width: 20em;
+    background-color: #fafafa;
+    border-radius: 1.1em;
+    padding: 1.5em;
+    display: grid; }
+  .form-section label {
+    padding-bottom: 0.6em; }
+  .form-section input {
+    height: 2em; }
+  .form-section input[type='submit'] {
+    width: 80px;
+    border-radius: 2em;
+    margin: 0 auto;
+    font-family: "Public Sans", sans-serif; }
 
 @media only screen and (min-width: 450px) {
   .intro-content,

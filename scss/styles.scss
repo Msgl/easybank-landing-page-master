@@ -104,6 +104,10 @@ footer {
       color: $clr-primary-green;
     }
   }
+
+  .copyright {
+    color: $clr-neutral-white;
+  }
 }
 
 header,
@@ -316,6 +320,35 @@ footer {
   .footer-copyright {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+/*contact.html*/
+.form-section {
+  height: 65vh;
+  padding-top: 20vh;
+  display: grid;
+  place-content: center;
+
+  .my-form {
+    width: 20em;
+    background-color: $clr-neutral-very-light-gray;
+    border-radius: 1.1em;
+    padding: 1.5em;
+    display: grid;
+  }
+  label {
+    padding-bottom: 0.6em;
+  }
+  input {
+    height: 2em;
+  }
+
+  input[type='submit'] {
+    width: 80px;
+    border-radius: 2em;
+    margin: 0 auto;
+    font-family: $ff-main;
   }
 }
 

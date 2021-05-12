@@ -1,17 +1,14 @@
 # Frontend Mentor - Easybank landing page solution
 
-This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN). 
+This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
-
-## Overview
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Built with](#built-with)
+- [Useful resources](#useful-resources)
 
 ### The challenge
 
@@ -22,17 +19,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
-
+- Live Site URL: https://easybank-landing-page-master-nu.vercel.app/
 
 ### Built with
 
-
-### Useful resources
-
-
+- HTML
+- SCSS
+- JavaScript

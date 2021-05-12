@@ -15,32 +15,31 @@
     <img class="logo" src="/images/logo.svg" alt="easybank logo">
     <nav id="nav-menu">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
+        <li><a class="nav-items" href="#">Home</a></li>
+        <li><a class="nav-items" href="#product-about">About</a></li>
+        <li><a class="nav-items" href="#blog-articles">Blog</a></li>
+        <li><a class="nav-items" href="#footer-contact-career">Contact</a></li>
+        <li><a class="nav-items" href="#footer-contact-career">Careers</a></li>
       </ul>
-
     </nav>
-    <button class="nav-btn request-inv-btn">Request Invite</button>
-    <button class="burger-btn" onclick="toggleNav()"><i class="fas fa-bars "></i></button>
+    <button class="nav-btn request-inv-btn" onclick="window.location.href='contact.html'">Request Invite</button>
+    <button class="burger-btn" aria-label="menu button" onclick="toggleNav()"><i class="fas fa-bars "></i></button>
   </header>
 
-  <div class="main">
+  <main class="main">
     <section class="intro-section">
       <div class="intro-content">
         <h1>Next generation digital banking</h1>
         <p>Take your financial life online. Your Easybank account will be a one-stop-shop 
           for spending, saving, budgeting, investing, and much more.</p>
-        <button class="request-inv-btn">Request Invite</button>
+          <button class="nav-btn request-inv-btn" onclick="window.location.href='contact.html'">Request Invite</button>
       </div>
 
       <div class="intro-image">
       </div>
     </section>
 
-    <section class="product-section">
+    <section id="product-about" class="product-section">
       <div class="product-text">
           <h2>Why choose Easybank?</h2>
           <p>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
@@ -71,7 +70,7 @@
       </div>
     </section>
 
-    <section class="articles-section">
+    <section id="blog-articles" class="articles-section">
       <h2 class="articles-title">Latest Articles</h2>
       <div class="articles-container">
         <div class="articles-item">
@@ -117,35 +116,34 @@
         </div>
       </div>
     </section>
+  </main>
 
-    <footer>
-      <div class="footer-part1">
-        <img src="/images/logo-white.svg" alt="easybank logo" class="footer-logo">
-        <div class="footer-social">
-          <a href="#"><img src="/images/icon-facebook.svg" alt="facebook logo"></a>
-          <a href="#"><img src="/images/icon-youtube.svg" alt="youtube logo"></a>
-          <a href="#"><img src="/images/icon-twitter.svg" alt="twitter logo"></a>
-          <a href="#"><img src="/images/icon-pinterest.svg" alt="pinterest logo"></a>
-          <a href="#"><img src="/images/icon-instagram.svg" alt="instagram logo"></a>
-        </div>
+  <footer id="footer-contact-career">
+    <div class="footer-part1">
+      <img src="/images/logo-white.svg" alt="easybank logo" class="footer-logo">
+      <div class="footer-social">
+        <a href="#"><img src="/images/icon-facebook.svg" alt="facebook logo"></a>
+        <a href="#"><img src="/images/icon-youtube.svg" alt="youtube logo"></a>
+        <a href="#"><img src="/images/icon-twitter.svg" alt="twitter logo"></a>
+        <a href="#"><img src="/images/icon-pinterest.svg" alt="pinterest logo"></a>
+        <a href="#"><img src="/images/icon-instagram.svg" alt="instagram logo"></a>
       </div>
+    </div>
 
-        <ul class="footer-part2">
-          <li><a class="footer-links" href="#">About Us</a></li>
-          <li><a class="footer-links" href="#">Contact</a></li>
-          <li><a class="footer-links" href="#">Blog</a></li>
-          <li><a class="footer-links" href="#">Careers</a></li>
-          <li><a class="footer-links" href="#">Support</a></li>
-          <li><a class="footer-links" href="#">Privacy Policy</a></li>
-        </ul>
+      <ul class="footer-part2">
+        <li><a class="footer-links" href="#product-about">About Us</a></li>
+        <li><a class="footer-links" href="#blog-articles">Blog</a></li>
+        <li><a class="footer-links" href="#">Contact</a></li>
+        <li><a class="footer-links" href="#">Careers</a></li>
+        <li><a class="footer-links" href="#">Support</a></li>
+        <li><a class="footer-links" href="#">Privacy Policy</a></li>
+      </ul>
 
-      <div class="footer-part3">
-        <button class="request-inv-btn">Request Invite</button>
-        <p class="footer-copyright"><small class="copyright">&copy; Easybank. All Rights Reserved</small></p>
-      </div>
-
-    </footer>
-  </div>
-  <script src="/scripts.js"></script>
+    <div class="footer-part3">
+      <button class="nav-btn request-inv-btn" onclick="window.location.href='contact.html'">Request Invite</button>
+      <p class="footer-copyright"><small class="copyright">&copy; Easybank. All Rights Reserved</small></p>
+    </div>
+  </footer>
+  <script src="js/scripts.js"></script>
   </body>
 </html>
